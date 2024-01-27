@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+:root{
+    /*colors*/
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 20%);
+    --Dark-Grey: hsl(0, 0%, 12%);
+    --Off-Black: hsl(0, 0%, 8%);
+    /*fonts*/
+    --Font-size-paragraph: 14px;
+    --Font-family: 'Inter', sans-serif;
+    --Font-weight1: 400;
+    --Font-weight2: 600;
+    --Font-weight3: 800;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  font-family: var(--Font-family);
+  background-color: var(--Off-Black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+    background-color: var(--Dark-Grey);
+    width: 380px;
+    height: 610px;
+    border-radius: 12px;
+    display: grid;
+    place-items: start center;
+    grid-template-rows: 150px 135px 300px ;
+   grid-template-columns: 1fr;
+}
+
+.img{
+    margin-top: 37px;
+    display: grid;
+    place-items: center;
+}
+img{
+    border-radius: 50%;
+    width: 50%;
+}
+
+.inf{
+    margin-top: 6px;
+    font-size: var(--Font-size-paragraph);
+    font-weight: var(--Font-weight1);
+    display: grid;
+    place-items: center;
+}
+h2{
+    font-size:x-large;
+    margin-bottom: 8px;
+    font-weight: var(--Font-weight2);
+}
+h2,p{
+    color: var(--White);
+}
+#green{
+    font-weight: var(--Font-weight2);
+    margin-bottom: 29px;
+    color: var(--Green);
+}
+
+section{
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
+button{
+    margin-bottom: 17px;
+    padding-block: 14px;
+    background-color: var(--Grey);
+    border: none;
+    width: 80%;
+    border-radius: 12px;
+    color: var(--White);
+    font-weight: var(--Font-weight2);
+    font-size: 14px;
+    font-family: var(--Font-family);
+}
+
+button:hover{
+    background-color: var(--Green);
+    color: var(--Dark-Grey);
+}
+
+@media (max-width: 400px){
+    main{
+        background-color: var(--Dark-Grey);
+        width: 86%;
+        height: 610px;
+        border-radius: 12px;
+        display: grid;
+        place-items: start center;
+        grid-template-rows: 150px 135px 300px ;
+       grid-template-columns: 1fr;
+    }
+}
