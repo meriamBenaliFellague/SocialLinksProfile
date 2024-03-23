@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 :root{
     /*colors*/
-    --Green: hsl(75, 94%, 57%);
+    --pink: #A5658A;
     --White: hsl(0, 0%, 100%);
     --Grey: hsl(0, 0%, 20%);
     --Dark-Grey: hsl(0, 0%, 12%);
@@ -24,7 +24,11 @@ body{
   height: 100vh;
   width: 100vw;
   font-family: var(--Font-family);
-  background-color: var(--Off-Black);
+ /* background-color: var(--Off-Black);*/
+  background-image: url(./assets/images/cat.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,18 +42,26 @@ main{
     display: grid;
     place-items: start center;
     grid-template-rows: 150px 135px 300px ;
-   grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
 }
 
 .img{
-    margin-top: 37px;
+    margin-top: 30px;
     display: grid;
     place-items: center;
 }
+
 img{
     border-radius: 50%;
-    width: 50%;
+    width: 30%;
+    transition: all 0.7s;
 }
+
+img:hover{
+    transform: scale(1.10);
+    opacity: 1;
+    box-shadow: 0 0px 8px 0  var(--pink),  0 0px 20px 0 var(--pink);
+  }
 
 .inf{
     margin-top: 6px;
@@ -62,6 +74,7 @@ h2{
     font-size:x-large;
     margin-bottom: 8px;
     font-weight: var(--Font-weight2);
+    
 }
 h2,p{
     color: var(--White);
@@ -69,7 +82,7 @@ h2,p{
 #green{
     font-weight: var(--Font-weight2);
     margin-bottom: 29px;
-    color: var(--Green);
+    color: var(--pink);
 }
 
 section{
@@ -83,17 +96,21 @@ button{
     padding-block: 14px;
     background-color: var(--Grey);
     border: none;
-    width: 80%;
+    width: 304px;
     border-radius: 12px;
     color: var(--White);
     font-weight: var(--Font-weight2);
     font-size: 14px;
     font-family: var(--Font-family);
+    transition: all 0.7s;
 }
 
 button:hover{
-    background-color: var(--Green);
+    background-color: var(--pink);
     color: var(--Dark-Grey);
+    transform: scale(1.10);
+    opacity: 1;
+    
 }
 
 @media (max-width: 400px){
@@ -106,5 +123,8 @@ button:hover{
         place-items: start center;
         grid-template-rows: 150px 135px 300px ;
        grid-template-columns: 1fr;
+    }
+    button{
+        width: 258px;
     }
 }
